@@ -16,7 +16,10 @@ export default function HomeScreen() {
   useLayoutEffect(() => {
     navigation.setOptions({
       headerRight: () => (
-        <NotificationIcon onPress={() => setShowNotifications(true)} />
+        <NotificationIcon 
+        // onPress={() => setShowNotifications(true)}
+        onPress={() => navigation.navigate('NotificationList')} 
+         />
       ),
     });
   }, [navigation]);
